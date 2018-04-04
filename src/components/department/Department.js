@@ -11,10 +11,9 @@ import './Department.css';
 export default class Exams extends Component {
 
   render() {
-
     return (
       <section className="department">
-        <p>útfæra</p>
+        
       </section>
     );
   }

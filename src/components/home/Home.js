@@ -12,7 +12,8 @@ export default class Home extends Component {
 
     return (
       <div className="home">
-        <p>útfæra</p>
+      {/*this.props.breyta - nota breytur úr skjali sem renderar þetta skjal*/}
+
       </div>
     );
   }
