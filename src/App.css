@@ -5,8 +5,13 @@
   padding: 10px;
 }
 
-.app ul {
-  color: blue;
+.app h1 {
+  font-family: 'Noto Serif', serif;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline;
+  padding: 10px;
 }
 
 /* útfæra */

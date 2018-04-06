@@ -1,1 +1,24 @@
 /* útfæra */
+
+.department a {
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+.department .table-department{
+  font-size: 16px;
+}
+
+.department .table-department .tr-odd:nth-child(odd) {
+  background: #eee;
+}
+
+.department .table-department .tr-heading {
+  font-weight: 900;
+}
+
+.department .table-department, td, th {
+  padding: 10px;
+}

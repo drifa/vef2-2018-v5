@@ -1,1 +1,15 @@
-/* útfæra */
+
+.school .schools-list {
+  list-style: none;
+}
+
+.school h2 {
+  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.school .home-button {
+  font-family: 'Noto Sans', sans-serif;
+}

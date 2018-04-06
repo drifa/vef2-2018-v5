@@ -1,1 +1,21 @@
 /* útfæra */
+
+.home {
+  padding: 10px;
+}
+
+.home .table-stats {
+  padding: 10px;
+}
+
+.home .td-stats-heading {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+}
+
+.home h2 {
+  font-size: 25px;
+  font-family: 'Noto Serif', serif;
+  padding: 10px;
+  font-weight: bold;
+}

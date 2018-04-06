@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { Navbar } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import { NavItem } from 'react-bootstrap';
-
 import './Navigation.css';
 
 /* hér ætti að sækja gögn frá vefþjónustu fyrir valmynd */
@@ -13,25 +9,29 @@ import './Navigation.css';
 export default class Navigation extends Component {
 
   render() {
+    const selectedNavItem = this.props.selectedNavItem;
+    console.log("NAV: \n"+JSON.stringify(this.props));
     return (
-      <Navbar className="navigation">
-        <Navbar.Header>
-          <Navbar.Brand>
-            <h1>Próftöflur</h1>
-          </Navbar.Brand>
-        </Navbar.Header>
-        <Nav>
-          {
-            this.props.schoolList.map(school => {
-              return (
-                <NavItem>
-                  <Link key={school.slug} to={school.link} className="nav-item">{school.name}</Link>
-                </NavItem>
-              )
-            })
-          }
-        </Nav>
-      </Navbar>
+      <nav className="navigation">
+        {
+          this.props.schoolList.map(school => {
+            let className = 'nav-item';
+
+            if (selectedNavItem === school.slug) {
+              className = 'nav-item-bold';
+            }
+            return (
+              <Link key={school.slug} to={school.link} onClick={this.props.setSelectedNavItem.bind(this, school.slug)} className={className}>{school.name}</Link>
+            )
+          })
+        }
+      </nav>
     );
   }
+}
+
+Navigation.propTypes = {
+  schoolList: PropTypes.array,
+  selectedNavItem: PropTypes.string,
+  setSelectedNavItem: PropTypes.func,
 }
